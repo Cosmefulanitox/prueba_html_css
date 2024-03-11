@@ -10,14 +10,49 @@ form-> es la etiqueta que engloba nuestro formulario
 label->sirve para escribir el nombre del campo a rellenar 
 input->sirve para crear un cmapo que permitira al usuario interactuar
 button->crea un boton que permitira enviar los formularios 
+datalist->Se utiliza para agrupar elementos en una lista y permite al usuario escribir letras y que le salgan opciones
+
+fieldset->Sirve para agrupar elementos dentro de un formulario 
+legend->Representa una etiqueta para el contenido del fieldset
+file-> es un input que permite al usuario cargar un archivo y enviarlos 
+meter->representa un valor dentro de un rango definido 
+progress->Representa el progreso de una tarea 
+placeholder->da una pista al usuario de lo que tiene que introducir 
+required ->Vuelve un campo obligatorio 
+readonly-> hace que un campo sea solo de lectura 
+min-max= establece el minimo y el maximo de un campo numerico
+maxlenght-minlenght->establece un minimo y maximo de caracteres
+selected-> sirve para establecer una opcion por defecto 
+
+Formas de envio GET Y POST 
 
 -->
 <body>
-    <form>
-        <label>Nombre</label>
-        <input>
+    <form action="enviar.html" method="GET">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="nombre"><!--A los inputs de los formularios siempre hay que ponerles name-->
         <button>Enviar formulario</button>
+        <input type="list" list="pets">
+        <datalist id="pets">
 
+            <option value="perro">Perro</option>
+            <option value="elefante">Elefante</option>
+            <option value="gato">Gato</option>
+            <option value="paloma">Paloma </option>
+
+        </datalist>
+       <form >
+         <fieldset>
+            <legend>Datos personales</legend>
+          <label for="name">Nombre</label>
+          <input type="text" placeholder="Introduce tu nombre" >
+          <label for="surname">Apellido</label>
+          <input type="text" placeholder="Introduce tu apellido">
+
+
+         </fieldset>
+
+       </form>
 
     </form>
     
